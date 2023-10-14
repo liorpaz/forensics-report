@@ -5,7 +5,7 @@ import {DamagePointDescriptions} from './components/DamagePointDescriptions/Dama
 import {StoreContext} from './store/StoreContext';
 import {Store} from './store/store';
 import {Header} from './components/Header/Header';
-import {Circumstances} from './components/circumstances/Circumstances';
+import {Circumstances} from './components/Cֹircumstances/Circumstances';
 import {Questions} from './components/Questions/Questions';
 
 function App() {
