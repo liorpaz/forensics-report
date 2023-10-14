@@ -1,0 +1,33 @@
+.Questions {
+
+}
+
+.Questions ol {
+    margin-top: 10px;
+    list-style-type: hebrew;
+    direction: rtl;
+}
+
+.Questions ol li {
+    margin-bottom: 1rem;
+}
+
+.Questions .questions-section {
+
+}
+
+.Questions .title {
+
+}
+
+.Questions .question {
+
+}
+
+.Questions .answer {
+
+}
+
+table {
+    width: 100%;
+}

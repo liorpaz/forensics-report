@@ -1,5 +1,5 @@
 import React, {SyntheticEvent, useContext, useEffect, useRef, useState} from 'react';
-import './CanvasSection.css';
+import './DamagePointsCanvas.css';
 import bodyImage from'./body.png';
 import {DamagePoint, Point} from '../../types';
 import {useStore} from '../../store/StoreContext';
@@ -11,7 +11,7 @@ const lineColor = "#000000";
 const lineOpacity = 1;
 const lineWidth = 2;
 
-export const CanvasSection = observer(()=> {
+export const DamagePointsCanvas = observer(()=> {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ctxRef = useRef<CanvasRenderingContext2D|null>(null);
@@ -104,7 +104,7 @@ export const CanvasSection = observer(()=> {
   };
 
   return (
-    <div className="CanvasSection">
+    <div className="DamagePointsCanvas">
       <canvas id="canvas"
               onMouseDown={startDrawing}
               onMouseUp={endDrawing}

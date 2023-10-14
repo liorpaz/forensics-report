@@ -1,9 +1,9 @@
 import React, {SyntheticEvent, useCallback} from 'react';
-import './DataSection.css';
-import {useStore} from '../store/StoreContext';
+import './DamagePointDescriptions.css';
+import {useStore} from '../../store/StoreContext';
 import {observer} from 'mobx-react-lite';
 
-export const DataSection = observer(()=> {
+export const DamagePointDescriptions = observer(()=> {
   const {damagePoints, addDamagePointDescription, deleteDamagePoint} = useStore()
 
   const onInput = useCallback((e:SyntheticEvent, index:number) => {
@@ -12,7 +12,7 @@ export const DataSection = observer(()=> {
   }, []);
 
   return (
-    <div className={'DataSection'}>
+    <div className={'DamagePointDescriptions'}>
       <table >
         <thead>
           <tr>
