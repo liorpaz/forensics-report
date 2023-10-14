@@ -35,7 +35,7 @@
 
 /* hide buttons in print media query */
 @media print {
-  button {
+  .no-print {
     display: none !important;
   }
   size: A4 landscape ;
@@ -44,6 +44,15 @@
   margin-left:0;
   margin-right:0; 
   font-size: 2px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+table td {
+    border: 1px solid #ddd;
 }
 
 button {

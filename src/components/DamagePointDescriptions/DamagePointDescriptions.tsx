@@ -4,7 +4,7 @@ import {useStore} from '../../store/StoreContext';
 import {observer} from 'mobx-react-lite';
 
 export const DamagePointDescriptions = observer(()=> {
-  const {damagePoints, addDamagePointDescription, deleteDamagePoint} = useStore()
+  const {damagePoints, numDamagePoints, addDamagePointDescription, deleteDamagePoint} = useStore()
 
   const onInput = useCallback((e:SyntheticEvent, index:number) => {
     const target = e.target as HTMLInputElement;
@@ -30,11 +30,10 @@ export const DamagePointDescriptions = observer(()=> {
                 <td className={'delete'} onClick={()=>deleteDamagePoint(index)}>🗑</td>
               </tr>
             );
-          }
-          )}
+          })}
         </tbody>
       </table>
-
+      {numDamagePoints === 0 && <div className={'enter-damage-msg'}>נא להזין פגיעות עי לחיצה על הציור</div>}
     </div>
   )
 });
