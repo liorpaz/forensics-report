@@ -2,7 +2,6 @@
     display: flex;
     grid-area: damage-point-descriptions;
     flex-direction: column;
-    align-items: center;
     margin: auto;
     height: 100%;
     width:100%;

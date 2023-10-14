@@ -33,7 +33,6 @@ export const DamagePointDescriptions = observer(()=> {
           }
           )}
         </tbody>
-        <input type={'text'}/>
       </table>
 
     </div>

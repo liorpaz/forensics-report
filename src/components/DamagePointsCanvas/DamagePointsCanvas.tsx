@@ -1,4 +1,4 @@
-import React, {SyntheticEvent, useContext, useEffect, useRef, useState} from 'react';
+import React, {SyntheticEvent, useEffect, useRef, useState} from 'react';
 import './DamagePointsCanvas.css';
 import bodyImage from'./body.png';
 import {DamagePoint, Point} from '../../types';
@@ -105,6 +105,7 @@ export const DamagePointsCanvas = observer(()=> {
 
   return (
     <div className="DamagePointsCanvas">
+      {numDamagePoints}
       <canvas id="canvas"
               onMouseDown={startDrawing}
               onMouseUp={endDrawing}
