@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  width: 600px;
+  padding: 0px;
+}
+
+/* hide buttons in print media query */
+@media print {
+  button {
+    display: none !important;
+  }
+}
+

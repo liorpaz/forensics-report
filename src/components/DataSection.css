@@ -1,0 +1,25 @@
+.DataSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.DataSection table {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.DataSection table td,
+.DataSection table th {
+    white-space:pre;
+    border: 1px solid #ddd;
+}
+
+.delete {
+    width: 20px;
+}
+
+.index {
+    width: 20px;
+}
