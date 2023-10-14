@@ -10,7 +10,7 @@ export const Header = () => {
   }
 
   return (
-    <div className="Header">
+    <div className="Header no-print">
       <div>
         <button onClick={store?.clear}>reset</button>
         <button onClick={print}>print</button>

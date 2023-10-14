@@ -7,15 +7,17 @@
     width:100%;
 }
 
-.DamagePointDescriptions table {
-    width: 100%;
-    border: 1px solid #ddd;
-}
-
 .DamagePointDescriptions table td,
 .DamagePointDescriptions table th {
     white-space:pre;
     border: 1px solid #ddd;
+}
+
+.DamagePointDescriptions .enter-damage-msg {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: auto;
 }
 
 .delete {
