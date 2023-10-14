@@ -8,6 +8,7 @@ export const Circumstances = () => {
       <table dir={'rtl'}>
         <thead>
           <tr>
+            <th></th>
             <th>נסיבות</th>
             <th>קוד ICD</th>
             <th>הגדרה מהרשימה</th>
@@ -32,4 +33,13 @@ const tableData = [
     ['ירי', 'E995.4','Other and unspecified firearm'],
     ['חדה שאינה ירי (למשל סכין)', 'E995.2', 'Piercing object'],
     ['קהה (כגון חבלה מגורם זר / ידויי אבנים)', 'E9952', 'Struck by blunt object'],
+    ['פיצוץ מכל סוג', 'E993.9', 'Unspecified explosion'],
+    ['תאונת דרכים', 'E829', 'Other road vehicle accident'],
+    ['נפילה', 'E888.9', 'Unspecified fall'],
+    ['נשיכת חיה', 'E906.5', 'Bite of unspecified animal'],
+    ['פגיעת בעל חיים אחרת', 'E906.8', 'Other specified injury caused by animal'],
+    ['שריפה/חום משמעותי', 'E900', 'Excessive heat'],
+    ['טביעה', 'E910', 'Accidental drowning and submersion'],
+    ['התחשמלות', 'E958.4', 'Electricution'],
+
   ]

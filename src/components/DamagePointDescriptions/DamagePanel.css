@@ -1,0 +1,11 @@
+.damage-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width:100%;
+}
+
+
+.damage-panel .column {
+    padding: 10px;
+  }

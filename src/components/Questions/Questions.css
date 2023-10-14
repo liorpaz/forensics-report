@@ -30,5 +30,14 @@
 }
 
 table {
+    border: 1px solid #ccc;
+}
+
+td {
+    border: 1px solid #ccc;
+}
+
+
+.Questions input {
     width: 100%;
 }

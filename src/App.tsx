@@ -7,6 +7,7 @@ import { Store } from './store/store';
 import { Header } from './components/Header/Header';
 import { Circumstances } from './components/circumstances/Circumstances';
 import { Questions } from './components/Questions/Questions';
+import { DamagePanel } from './components/DamagePointDescriptions/DamagePanel';
 
 function App() {
 
@@ -19,8 +20,7 @@ function App() {
         <div className='left-panel'>
           <Header />
           <Circumstances />
-          <DamagePointsCanvas />
-          <DamagePointDescriptions />
+          <DamagePanel/>
         </div>
         <div className='right-panel'>
           <Questions />
