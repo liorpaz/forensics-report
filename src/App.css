@@ -1,10 +1,4 @@
 .App {
-  display: grid;
-  grid-template-areas: "header header header"
-  "circumstances circumstances circumstances"
-  "damage-points-canvas damage-point-descriptions damage-point-descriptions"
-  "questions questions questions";
-  grid-template-columns: 1fr 1fr 1fr;
   /*text-align: center;*/
   width: 100%;
   grid-gap: 10px;
@@ -12,11 +6,36 @@
   margin: 0;
 }
 
+@media print  {
+  .App 
+  {
+    display: grid;
+    grid-template-areas: "left-panel  right-panel";
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    grid-gap: 3px;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    
+  }
+  input {
+    border: none; 
+  }
+}
+
+
 /* hide buttons in print media query */
 @media print {
   button {
     display: none !important;
   }
+  size: A4 landscape ;
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:0;
+  margin-right:0; 
+  font-size: 2px;
 }
 
 button {

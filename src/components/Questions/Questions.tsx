@@ -65,7 +65,7 @@ export const Questions = () => {
                 <td>{gear}</td>
                 <td><input type={'checkbox'} /></td>
                 <td><input type={'checkbox'} /></td>
-                <td><input type={'text'} /></td>
+                <td><input type={'text'} style={{width:"100%"}}/></td>
               </tr>))}
             </tbody>
           </table>
@@ -85,14 +85,14 @@ export const Questions = () => {
               </tr>
               {injuries.map((injury, index) => (
                 <tr key={index}>
-                  <td><input type={'checkbox'} />{injury.organ}</td>
+                  <td><label style={{width:"100%"}}><input type={'checkbox'} />{injury.organ}</label></td>
                   <td>{injury.injury}</td>
                   <td>{injury.icdCode}</td>
                 </tr>))}
               <tr>
-                <td><input type={'checkbox'} /><input type={'text'} placeholder='אחר' /></td>
-                <td><input type={'text'} /></td>
-                <td><input type={'text'} /></td>
+                <td><label><input type={'text'} placeholder='אחר'  style={{width:"100%"}} /></label></td>
+                <td><input type={'text'} style={{width:"100%"}} /></td>
+                <td><input type={'text'} style={{width:"100%"}}/></td>
               </tr>
             </tbody>
           </table>
@@ -108,8 +108,21 @@ export const Questions = () => {
             <li>האם בוצעה נתיחה? (כן/לא) <input type={'checkbox'} /> </li>
             <li>האם בוצע CT? (כן/לא) <input type={'checkbox'} /> </li>
             <li>האם בוצעו בדיקות נוספות לגופת החלל?<input type={'text'} /> </li>
-
             </ol>
+        </div>
+      </div>
+
+      <div className={'questions-section'}>
+        <div className={'title'}></div>
+        <div className={'answer'}>
+        <table>
+            <tbody>
+              <tr>
+                <th>Potentially Survivable/Survivable</th>
+                <th>Non-survivable</th>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

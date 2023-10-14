@@ -4,7 +4,18 @@
     width: 600px;
     height: 600px;
 }
+
+@media print  {
+    .DamagePointsCanvas {
+        grid-area: damage-points-canvas;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
 .DamagePointsCanvas canvas {
     width: 100%;
     height: 100%;
 }
+

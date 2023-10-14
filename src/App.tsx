@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import {DamagePointsCanvas} from './components/DamagePointsCanvas/DamagePointsCanvas';
-import {DamagePointDescriptions} from './components/DamagePointDescriptions/DamagePointDescriptions';
-import {StoreContext} from './store/StoreContext';
-import {Store} from './store/store';
-import {Header} from './components/Header/Header';
-import {Circumstances} from './components/circumstances/Circumstances';
-import {Questions} from './components/Questions/Questions';
+import { DamagePointsCanvas } from './components/DamagePointsCanvas/DamagePointsCanvas';
+import { DamagePointDescriptions } from './components/DamagePointDescriptions/DamagePointDescriptions';
+import { StoreContext } from './store/StoreContext';
+import { Store } from './store/store';
+import { Header } from './components/Header/Header';
+import { Circumstances } from './components/circumstances/Circumstances';
+import { Questions } from './components/Questions/Questions';
 
 function App() {
 
@@ -16,11 +16,15 @@ function App() {
   return (
     <StoreContext.Provider value={store}>
       <div className="App">
-        <Header/>
-        <Circumstances/>
-        <DamagePointsCanvas/>
-        <DamagePointDescriptions/>
-        <Questions/>
+        <div className='left-panel'>
+          <Header />
+          <Circumstances />
+          <DamagePointsCanvas />
+          <DamagePointDescriptions />
+        </div>
+        <div className='right-panel'>
+          <Questions />
+        </div>
       </div>
     </StoreContext.Provider>
   );
