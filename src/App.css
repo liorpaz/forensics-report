@@ -68,6 +68,11 @@ table td {
     border: 1px solid #444;
 }
 
+table .shrink {
+    width: 1px;
+    white-space: nowrap;
+}
+
 button {
  appearance: none;
  background-color: #2ea44f;

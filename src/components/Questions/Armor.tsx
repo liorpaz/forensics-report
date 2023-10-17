@@ -1,6 +1,7 @@
 import React from 'react';
 import {protectionGear} from './questionsData';
 import TextareaAutosize from 'react-textarea-autosize';
+import {RadioButton} from '../RadioButton/RadioButton';
 
 export const Armor = () => {
   return (<div className={'questions-section'}>
@@ -11,15 +12,13 @@ export const Armor = () => {
         <tbody>
         <tr>
           <th>אמצעי מיגון</th>
-          <th>האם השתמש באמצעי מיגון?</th>
-          <th>האם המיגון נפגע</th>
+          <th className={'shrink'}>האם המיגון נפגע</th>
           <th>תיאור הפגיעה במיגון</th>
         </tr>
         {protectionGear.map((gear, index) => (
           <tr key={gear}>
-            <td>{gear}</td>
-            <td><input type={'checkbox'} /></td>
-            <td><input type={'checkbox'} /></td>
+            <td><input type={'checkbox'}/> {gear}</td>
+            <td><RadioButton options={['כן', 'לא']}/></td>
             <td><TextareaAutosize rows={1} /></td>
           </tr>))}
         </tbody>
