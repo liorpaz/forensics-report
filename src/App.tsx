@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header';
 import { Questions } from './components/Questions/Questions';
 import { DamagePanel } from './components/DamagePointDescriptions/DamagePanel';
 import { Circumstances } from './components/Cֹircumstances/Circumstances';
+import { Identity } from './components/Identity/Identity';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <div className="App">
         <div className='left-panel'>
           <Header />
+          <Identity/>
           <Circumstances />
           <DamagePanel/>
         </div>

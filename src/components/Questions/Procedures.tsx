@@ -19,9 +19,9 @@ export const Procedures = () => {
           {[1,2,3,4].map((index) => (
           <tr key={index}>
             <td>{index}</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><input type="text"></input></td>
+            <td><input type="text"></input></td>
+            <td><input type="text"></input></td>
           </tr>))}
 
         </tbody>
