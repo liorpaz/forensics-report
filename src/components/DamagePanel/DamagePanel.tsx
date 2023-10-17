@@ -1,6 +1,6 @@
 import React from 'react';
 import './DamagePanel.css';
-import { DamagePointDescriptions } from './DamagePointDescriptions';
+import { DamagePointDescriptions } from '../DamagePointDescriptions/DamagePointDescriptions';
 import { DamagePointsCanvas } from '../DamagePointsCanvas/DamagePointsCanvas';
 
 

@@ -46,10 +46,6 @@ td {
 }
 
 
-.Questions input[type="text"] {
-    width: 100%;
-}
-
 .Questions label {
     width: 100%;
     display: flex;

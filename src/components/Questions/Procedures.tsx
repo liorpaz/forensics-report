@@ -1,4 +1,5 @@
 import React from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export const Procedures = () => {
   return (<div className={'questions-section'}>
@@ -19,15 +20,15 @@ export const Procedures = () => {
           {[1,2,3,4].map((index) => (
           <tr key={index}>
             <td>{index}</td>
-            <td><input type="text"></input></td>
-            <td><input type="text"></input></td>
-            <td><input type="text"></input></td>
+            <td><TextareaAutosize /></td>
+            <td><TextareaAutosize /></td>
+            <td><TextareaAutosize /></td>
           </tr>))}
 
         </tbody>
       </table>
       <div className={'question'}>
-        האם בוצעו פרוצדורות או ניתוחים למיניהם בבית החולים? (כן/לא) <input type={'text'} placeholder={'אנא פרט'} />
+        האם בוצעו פרוצדורות או ניתוחים למיניהם בבית החולים? (כן/לא) <TextareaAutosize />
       </div>
     </div>
   </div>);

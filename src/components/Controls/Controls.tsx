@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Store} from '../../store/store';
-import './Header.css';
+import './Controls.css';
 
-export const Header = () => {
+export const Controls = () => {
   const [store] = useState(new Store());
 
   const print = ()=>{
@@ -10,7 +10,7 @@ export const Header = () => {
   }
 
   return (
-    <div className="Header no-print">
+    <div className="Controls no-print">
       <div>
         <button onClick={store?.clear}>reset</button>
         <button onClick={print}>print</button>

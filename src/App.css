@@ -11,6 +11,7 @@
     width: 1024px;
     margin:auto;
   }
+
 }
 
 
@@ -21,7 +22,7 @@
     grid-template-areas: "left-panel  right-panel";
     grid-template-columns: 50% 50%;
     width: 100%;
-    grid-gap: 3px;
+    grid-gap: 20px;
     padding: 0;
     margin: 0;
     font-size: 8px;
@@ -33,7 +34,12 @@
 }
 
 
-@media print{@page {size: A4 landscape;}}
+@media print{
+    @page {
+        size: A4 landscape;
+        /*margin: 7mm;*/
+    }
+}
 
 
 /* hide buttons in print media query */
@@ -42,9 +48,7 @@
     display: none !important;
 
   }
-  body{
-    margin: 7mm 7mm 7mm 7mm;
-  }
+
   input{
     padding: 0px;
     margin: 0px;
@@ -113,4 +117,20 @@ button:disabled {
 button:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+textarea {
+    border: none;
+    margin: 0;
+    padding: 0;
+    resize: none;
+    background: none;
+    width: 100%;
+}
+
+
+:root {
+    --background: #fff;
+    --background1: #ccc;
+    --background2: #eee
 }

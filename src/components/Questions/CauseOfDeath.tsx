@@ -1,5 +1,6 @@
 import React from 'react';
 import {injuries} from './questionsData';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export const CauseOfDeath = () => {
   return (<div className={'questions-section'}>
@@ -20,9 +21,9 @@ export const CauseOfDeath = () => {
             <td className='code-column'>{injury.icdCode}</td>
           </tr>))}
         <tr>
-          <td><input type={'text'} placeholder='אחר' /></td>
-          <td><input type={'text'} /></td>
-          <td><input type={'text'} /></td>
+          <td><input type={'checkbox'} />אחר</td>
+          <td><TextareaAutosize /></td>
+          <td><TextareaAutosize /></td>
         </tr>
         </tbody>
       </table>

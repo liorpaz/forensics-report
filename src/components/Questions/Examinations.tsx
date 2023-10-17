@@ -1,4 +1,5 @@
 import React from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export const Examinations = () => {
   return (<div className={'questions-section'}>
@@ -8,7 +9,7 @@ export const Examinations = () => {
         <li><label>האם בוצעה בדיקה חיצונית? (כן/לא) <input type={'checkbox'} /> </label></li>
         <li><label>האם בוצעה נתיחה? (כן/לא) <input type={'checkbox'} /> </label></li>
         <li><label>האם בוצע CT? (כן/לא) <input type={'checkbox'} /></label></li>
-        <li>האם בוצעו בדיקות נוספות לגופת החלל?<input type={'text'} /> </li>
+        <li>האם בוצעו בדיקות נוספות לגופת החלל?<TextareaAutosize /> </li>
 
       </ol>
     </div>

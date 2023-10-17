@@ -105,7 +105,6 @@ export const DamagePointsCanvas = observer(()=> {
 
   return (
     <div className="DamagePointsCanvas">
-      {numDamagePoints}
       <canvas id="canvas"
               onMouseDown={startDrawing}
               onMouseUp={endDrawing}
@@ -164,14 +163,14 @@ function loadExistingDamagePoints(canvas:HTMLCanvasElement, damagePoints:DamageP
         ctx.fillText(String(index+1), centerPoint.x, centerPoint.y);
         drawDot(ctx, damagePoint.areaPoints[0]);
       } else {
-        ctx.fillText(String(index+1), centerPoint.x, centerPoint.y);
+        ctx.fillText(String(index+1), centerPoint.x+15, centerPoint.y+7);
       }
     });
   }
 }
 
 function drawDot(ctx:CanvasRenderingContext2D, point:Point) {
-  ctx.fillText('x', point.x-5, point.y+6);
+  ctx.fillText('x', point.x+4, point.y+6);
   ctx.fillStyle = lineColor;
   ctx.fill();
 }

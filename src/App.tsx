@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './App.css';
 import { StoreContext } from './store/StoreContext';
 import { Store } from './store/store';
-import { Header } from './components/Header/Header';
+import { Controls } from './components/Controls/Controls';
 import { Questions } from './components/Questions/Questions';
-import { DamagePanel } from './components/DamagePointDescriptions/DamagePanel';
+import { DamagePanel } from './components/DamagePanel/DamagePanel';
 import { Circumstances } from './components/Cֹircumstances/Circumstances';
-import { Identity } from './components/Identity/Identity';
+import { TopSection } from './components/TopSection/TopSection';
 
 function App() {
 
@@ -17,8 +17,8 @@ function App() {
     <StoreContext.Provider value={store}>
       <div className="App">
         <div className='left-panel'>
-          <Header />
-          <Identity/>
+          <Controls />
+          <TopSection/>
           <Circumstances />
           <DamagePanel/>
         </div>

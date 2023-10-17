@@ -1,4 +1,8 @@
-.Header {
+.Controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
     display: flex;
     grid-area: header;
     justify-content: space-between;

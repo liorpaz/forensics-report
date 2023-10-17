@@ -1,5 +1,6 @@
 import React from 'react';
 import {protectionGear} from './questionsData';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export const Armor = () => {
   return (<div className={'questions-section'}>
@@ -19,7 +20,7 @@ export const Armor = () => {
             <td>{gear}</td>
             <td><input type={'checkbox'} /></td>
             <td><input type={'checkbox'} /></td>
-            <td><input type={'text'} /></td>
+            <td><TextareaAutosize rows={1} /></td>
           </tr>))}
         </tbody>
       </table>

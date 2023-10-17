@@ -1,0 +1,56 @@
+.TopSection {
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+
+.TopSection table {
+    table-layout: fixed;
+    border: none;
+    width: 100%;
+}
+
+.TopSection .no-border>td{
+    border: none;
+}
+
+.TopSection .form-filler {
+    border: 1px solid #ddd;
+    background: var(--background1);
+}
+
+.TopSection .top {
+    text-align: center;
+}
+
+.TopSection .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.TopSection .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height:80px;
+    background: url("./logo.jpg") no-repeat;
+    background-size: contain;
+}
+
+.TopSection .sticker {
+    text-align: center;
+    border: 2px solid #000;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50%;
+    height: 50px;
+    margin: 10px auto 10px auto;
+    line-height: 45px;
+}
+
+.bg-light-gray {
+    background: var(--background2);
+}
+textarea {
+    width: 100%;
+}
