@@ -5,7 +5,7 @@ import {DamagePoint, Point} from '../../types';
 import {useStore} from '../../store/StoreContext';
 import {observer} from 'mobx-react-lite';
 
-const CANVAS_WIDTH = 600;
+const CANVAS_WIDTH = 500;
 const CANVAS_HEIGHT = 600;
 const lineColor = "#000000";
 const lineOpacity = 1;
