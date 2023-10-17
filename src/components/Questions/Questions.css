@@ -12,9 +12,17 @@
     margin-bottom: 1rem;
 }
 
+@media print {
+    .Questions ol li {
+        margin-bottom: 0.2rem;
+    }
+}
+
 .Questions .questions-section {
+    margin-bottom: 0.5rem;
 
 }
+
 
 .Questions .title {
     font-weight: 500;
