@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {SyntheticEvent, useCallback} from 'react';
 import './TopSection.css';
 import TextareaAutosize from 'react-textarea-autosize';
+import {useStore} from '../../store/StoreContext';
+import {observer} from 'mobx-react-lite';
 
-export const TopSection = () => {
+export const TopSection = observer(() => {
+  const {info, setInfo} = useStore();
+  const onChange = useCallback((e:SyntheticEvent, field:string) => {
+    const target = e.target as HTMLInputElement;
+    setInfo(field, target.value);
+  }, []);
+
   return (<div className={'TopSection'}>
+    {JSON.stringify(info)}
     <div className={'top'}>
       <div className={'logo'}/>
       <div className={'title'}>
@@ -26,12 +35,20 @@ export const TopSection = () => {
           <td width={350}></td>
         </tr>
         <tr>
-          <td className={'bg-light-gray'}><TextareaAutosize/></td>
-          <td className={'bg-light-gray'}><TextareaAutosize/></td>
-          <td><TextareaAutosize/></td>
-          <td><TextareaAutosize/></td>
-          <td><TextareaAutosize/></td>
-          <td><TextareaAutosize/></td>
+          <td className={'bg-light-gray'}><TextareaAutosize
+            value={info.reporterName}
+            onChange={(e)=>onChange(e, 'reporterName')}/></td>
+          <td className={'bg-light-gray'}><TextareaAutosize
+            value={info.reporterID}
+            onChange={(e)=>onChange(e, 'reporterID')}/></td>
+          <td><TextareaAutosize  value={info.formDate}
+                                 onChange={(e)=>onChange(e, 'formDate')}/></td>
+          <td><TextareaAutosize  value={info.dateOfInjury}
+            onChange={(e)=>onChange(e, 'dateOfInjury')}/></td>
+          <td><TextareaAutosize value={info.timeOfInjury}
+            onChange={(e)=>onChange(e, 'timeOfInjury')}/></td>
+          <td><TextareaAutosize value={info.timeOfDeclaration}
+            onChange={(e)=>onChange(e, 'timeOfDeclaration')}/></td>
         </tr>
         <tr>
           <td className={'bg-light-gray'}>שם</td>
@@ -48,4 +65,4 @@ export const TopSection = () => {
     </table>
   </div>);
 
-}
+})

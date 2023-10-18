@@ -1,13 +1,23 @@
-import {makeAutoObservable, observe, reaction} from 'mobx';
+import {makeAutoObservable} from 'mobx';
 import {DamagePoint, Point} from '../types';
 import {autoSave} from './autoSave';
 
 export class Store {
   damagePoints:DamagePoint[] = [];
+  info = {
+    reporterName: '',
+    reporterID: '',
+    formDate: '',
+    dateOfInjury: '',
+    timeOfInjury: '',
+    timeOfDeclaration: ''
+  };
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, {}, { autoBind: true });
     autoSave(this, 'damagePoints');
+    autoSave(this, 'info');
+
   }
 
   addDamagePoint = (item:DamagePoint):number => {
@@ -29,11 +39,17 @@ export class Store {
 
   clear = () => {
     this.damagePoints.length = 0;
+    // @ts-ignore
+    Object.keys(this.info).forEach(key => this.info[key] = undefined);
+  }
+
+  setInfo = (key: string, value: any) => {
+    // @ts-ignore
+    this.info[key] = value;
   }
 
   get numDamagePoints() {
     return this.damagePoints.length;
   }
-
 
 }

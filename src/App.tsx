@@ -8,9 +8,10 @@ import { DamagePanel } from './components/DamagePanel/DamagePanel';
 import { Circumstances } from './components/Cֹircumstances/Circumstances';
 import { TopSection } from './components/TopSection/TopSection';
 
+const _store = new Store();
 function App() {
 
-  const [store] = useState(new Store());
+  const [store] = useState(_store);
 
   // @ts-ignore
   return (
