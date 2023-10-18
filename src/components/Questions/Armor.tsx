@@ -18,7 +18,7 @@ export const Armor = () => {
         {protectionGear.map((gear, index) => (
           <tr key={gear}>
             <td><input type={'checkbox'}/> {gear}</td>
-            <td><RadioButton options={['כן', 'לא']}/></td>
+            <td><RadioButton options={['כן', 'לא']} key={gear}/></td>
             <td><TextareaAutosize rows={1} /></td>
           </tr>))}
         </tbody>

@@ -2,13 +2,14 @@ import React from 'react';
 import './RadioButton.css';
 
 interface IRadioButtonProps {
-  options: string[]
+  options: string[] 
+  key: string
 }
 
-export const RadioButton = ({options}: IRadioButtonProps) => {
+export const RadioButton = ({options,key}: IRadioButtonProps) => {
   return (<div className={'RadioButton'}>
-    {options.map(o=>(<label key={o}>
-      <input type="radio" name={o} />
+    {options.map(o=>(<label  >
+      <input type="radio" name={key} />
       {o}
     </label>))}
   </div>)
