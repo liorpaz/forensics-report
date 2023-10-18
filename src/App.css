@@ -71,11 +71,13 @@ table {
 }
 table td {
     border: 1px solid #444;
+    padding: 0 5px;
 }
 
 table .shrink {
     width: 1px;
     white-space: nowrap;
+    padding: 0 5px;
 }
 
 button {

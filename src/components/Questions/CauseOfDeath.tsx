@@ -16,7 +16,7 @@ export const CauseOfDeath = () => {
         </tr>
         {injuries.map((injury, index) => (
           <tr key={index}>
-            <td className='organ-column'><label><input type={'checkbox'} />{injury.organ}</label></td>
+            <td className='shrink'><label><input type={'checkbox'} />{injury.organ}</label></td>
             <td>{injury.injury}</td>
             <td className='code-column'>{injury.icdCode}</td>
           </tr>))}

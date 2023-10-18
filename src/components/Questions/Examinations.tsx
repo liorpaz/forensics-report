@@ -1,17 +1,31 @@
 import React from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
+import {RadioButton} from '../RadioButton/RadioButton';
 
 export const Examinations = () => {
   return (<div className={'questions-section'}>
     <div className={'title'}>בדיקות שבוצעו לגופת החלל</div>
     <div className={'answer'}>
-      <ol>
-        <li><label>האם בוצעה בדיקה חיצונית? (כן/לא) <input type={'checkbox'} /> </label></li>
-        <li><label>האם בוצעה נתיחה? (כן/לא) <input type={'checkbox'} /> </label></li>
-        <li><label>האם בוצע CT? (כן/לא) <input type={'checkbox'} /></label></li>
-        <li>האם בוצעו בדיקות נוספות לגופת החלל?<TextareaAutosize /> </li>
-
-      </ol>
+      <table>
+        <tbody>
+          <tr>
+            <td>האם בוצעה בדיקה חיצונית?</td>
+            <td><RadioButton nm={'externalCheck'} options={['כן', 'לא']} /></td>
+          </tr>
+          <tr>
+            <td>האם בוצעה נתיחה? </td>
+            <td><RadioButton nm={'postmortem'} options={['כן', 'לא']} /></td>
+          </tr>
+          <tr>
+            <td>האם בוצע CT?</td>
+            <td><RadioButton nm={'ct'} options={['כן', 'לא']} /></td>
+          </tr>
+          <tr>
+            <td>האם בוצעו בדיקות נוספות לגופת החלל?</td>
+            <td><TextareaAutosize /></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>);
 }
