@@ -4,11 +4,11 @@ import './GeneralDescription.css';
 
 export const GeneralDescription = () => {
   return (<div className={'GeneralDescription'} dir={'rtl'}>
-    <div>1. הערות כלליות</div>
+    <div>1. תאור כלליות</div>
     <table>
       <tbody>
         <tr>
-          <td style={{width: 100}}>
+          <td style={{width: 300}}>
             תיאור כללי )גיל משוער, צבע עור, לבוש וציוד אישי, מצב גופה, מצב הריקבון)
           </td>
           <td>
