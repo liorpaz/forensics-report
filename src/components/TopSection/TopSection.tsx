@@ -12,7 +12,6 @@ export const TopSection = observer(() => {
   }, []);
 
   return (<div className={'TopSection'}>
-    {JSON.stringify(info)}
     <div className={'top'}>
       <div className={'logo'}/>
       <div className={'title'}>
