@@ -1,0 +1,9 @@
+.GeneralComments {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.GeneralComments .with-border {
+  border: 1px solid black;
+  padding: 10px;
+}

@@ -5,7 +5,10 @@ export const Circumstances = () => {
   // todo: connect check state to store.
   return (
     <div className="Circumstances">
-      <table dir={'rtl'}>
+      <div dir={'rtl'}>
+         2. האם ידועה נסיבת הפגיעה?
+      </div>
+      <table dir={'rtl'} className={'alternating'}>
         <thead>
           <tr>
             <th></th>

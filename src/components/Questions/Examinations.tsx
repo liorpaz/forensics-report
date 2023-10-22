@@ -4,9 +4,9 @@ import {RadioButton} from '../RadioButton/RadioButton';
 
 export const Examinations = () => {
   return (<div className={'questions-section'}>
-    <div className={'title'}>בדיקות שבוצעו לגופת החלל</div>
+    <div className={'title'}>7. בדיקות שבוצעו לגופת החלל</div>
     <div className={'answer'}>
-      <table>
+      <table className={'alternating'}>
         <tbody>
           <tr>
             <td>האם בוצעה בדיקה חיצונית?</td>
@@ -21,7 +21,7 @@ export const Examinations = () => {
             <td><RadioButton nm={'ct'} options={['כן', 'לא']} /></td>
           </tr>
           <tr>
-            <td>האם בוצעו בדיקות נוספות לגופת החלל?</td>
+            <td className={'shrink'}>האם בוצעו בדיקות נוספות לגופת החלל?</td>
             <td><TextareaAutosize /></td>
           </tr>
         </tbody>

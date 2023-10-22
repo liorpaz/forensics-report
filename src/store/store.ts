@@ -1,4 +1,4 @@
-import {makeAutoObservable} from 'mobx';
+import {action, makeAutoObservable, runInAction} from 'mobx';
 import {DamagePoint, Point} from '../types';
 import {autoSave} from './autoSave';
 
@@ -41,6 +41,7 @@ export class Store {
     this.damagePoints.length = 0;
     // @ts-ignore
     Object.keys(this.info).forEach(key => this.info[key] = undefined);
+    setTimeout(()=>window.location.reload(), 1000);
   }
 
   setInfo = (key: string, value: any) => {

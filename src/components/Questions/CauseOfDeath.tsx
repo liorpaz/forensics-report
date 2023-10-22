@@ -4,10 +4,11 @@ import TextareaAutosize from 'react-textarea-autosize';
 
 export const CauseOfDeath = () => {
   return (<div className={'questions-section'}>
-    <div className={'title'}>סיבת המוות</div>
+    <div className={'title'}>6. סיבת המוות</div>
     <div className={'question'}>האם ניתן לשער את סיבת המוות? במידה וכן אנא סמן את סיבה המוות</div>
+    <div className={'question'}>במידה ונסיבת המוות אינה כלולה בנסיבות מעלה ניתן לסמן אחר ולהוסיף מלל חופשי אך זאת באישור ובהתיעצות עם גורמי הענף</div>
     <div className={'answer'}>
-      <table>
+      <table className={'alternating'}>
         <tbody>
         <tr>
           <th>איבר</th>

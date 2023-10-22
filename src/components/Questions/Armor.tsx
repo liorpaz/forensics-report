@@ -5,10 +5,10 @@ import {RadioButton} from '../RadioButton/RadioButton';
 
 export const Armor = () => {
   return (<div className={'questions-section'}>
-    <div className={'title'}>מיגון אישי</div>
+    <div className={'title'}>5. מיגון אישי</div>
     <div className={'question'}>האם בעת הפגיעה, החלל השתמש באמצעי מיגון? (לציין האם היה שימוש באחד מאמצעי המיגון הבאים)</div>
     <div className={'answer'}>
-      <table>
+      <table className={'alternating'}>
         <tbody>
         <tr>
           <th>אמצעי מיגון</th>

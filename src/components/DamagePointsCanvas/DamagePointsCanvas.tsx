@@ -160,17 +160,19 @@ function loadExistingDamagePoints(canvas:HTMLCanvasElement, damagePoints:DamageP
       ctx.stroke();
       const centerPoint = getCenterPoint(getCurrentPoints(damagePoints, index));
       if (damagePoint.areaPoints.length < 3) {
-        ctx.fillText(String(index+1), centerPoint.x, centerPoint.y);
+        ctx.fillStyle = 'red';
+        ctx.fillText(String(index+1), centerPoint.x+15, centerPoint.y);
         drawDot(ctx, damagePoint.areaPoints[0]);
       } else {
+        ctx.fillStyle = 'red';
         ctx.fillText(String(index+1), centerPoint.x+15, centerPoint.y+7);
       }
     });
   }
 }
 
+
 function drawDot(ctx:CanvasRenderingContext2D, point:Point) {
-  ctx.fillText('x', point.x+4, point.y+6);
-  ctx.fillStyle = lineColor;
+  ctx.arc(point.x, point.y, 4, 0, 2 * Math.PI);
   ctx.fill();
 }

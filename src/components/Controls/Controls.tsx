@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Store} from '../../store/store';
 import './Controls.css';
+import {observer} from 'mobx-react-lite';
 
-export const Controls = () => {
+export const Controls = observer(() => {
   const [store] = useState(new Store());
 
   const print = ()=>{
@@ -17,4 +18,4 @@ export const Controls = () => {
       </div>
     </div>
   );
-}
+});
