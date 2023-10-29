@@ -17,6 +17,7 @@ import {Armor} from './components/Armor/Armor';
 import {Procedures} from './components/Questions/Procedures';
 import {DamagePointsCanvas} from './components/DamagePointsCanvas/DamagePointsCanvas';
 import {CauseOfDeath} from './components/Questions/CauseOfDeath';
+import {Findings} from './components/Findings/Findings';
 
 const _store = new Store();
 function App() {
@@ -46,8 +47,9 @@ function App() {
           <Flex style={{justifyContent: 'space-between'}}>
             <div style={{width: '50%'}}>
               <Procedures/>
-              <Flex>
+              <Flex style={{marginTop: 20}}>
                 <CauseOfDeath/>
+                <Findings/>
                 <div></div>
               </Flex>
             </div>

@@ -52,12 +52,6 @@ td {
     display: flex;
 }
 
-.code-column {
-    width: 50px;
-    text-align: center;
-}
-
-
 .organ-column {
     width: 100px;
 }

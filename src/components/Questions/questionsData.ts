@@ -1,5 +1,5 @@
 export const injuries = [
-  { organ: 'כללי פגיעות מרובות', injury: 'contusion of multuiple sites, not elsware classified', icdCode: '924.8' },
+  { organ: 'כללי פגיעות מרובות (פיצוץ/שריפה למשל)', injury: 'contusion of multuiple sites, not elsware classified', icdCode: '924.8' },
   { organ: 'ראש', injury: 'other and unspecified open wound of head, complicated', icdCode: '873.9' },
   { organ: 'צוואר', injury: 'Open wound of other and unspecificd pats of neck, complicated', icdCode: '874.9' },
   { organ: 'עמוד שדרה וחוט שדרה', injury: 'Open fracture of unspecified vertebral column with spinal cord injury', icdCode: '806.9' },
