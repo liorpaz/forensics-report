@@ -1,0 +1,9 @@
+.CheckList {
+    margin: 10px 0;
+    width: 100%;
+    grid-area: crew-details;
+}
+
+.CheckList{
+    width: 100%;
+}

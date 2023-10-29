@@ -4,11 +4,19 @@ import { StoreContext } from './store/StoreContext';
 import { Store } from './store/store';
 import { Controls } from './components/Controls/Controls';
 import { Questions } from './components/Questions/Questions';
-import { DamagePanel } from './components/DamagePanel/DamagePanel';
-import { Circumstances } from './components/Cֹircumstances/Circumstances';
-import { TopSection } from './components/TopSection/TopSection';
 import {GeneralComments} from './components/GeneralComments/GeneralComments';
-import {GeneralDescription} from './components/GeneralDescription/GeneralDescription';
+
+import {TopSection} from './components/TopSection/TopSection';
+import {CrewDetails} from './components/CrewDetails/CrewDetails';
+import {Flex} from './components/UIComponents/UIComponents';
+import {CheckList} from './components/CheckList/CheckList';
+import {Dates} from './components/Dates/Dates';
+import {BodyInfo} from './components/BodyInfo/BodyInfo';
+import {DamageCause} from './components/DamageCause/DamageCause';
+import {Armor} from './components/Armor/Armor';
+import {Procedures} from './components/Questions/Procedures';
+import {DamagePointsCanvas} from './components/DamagePointsCanvas/DamagePointsCanvas';
+import {CauseOfDeath} from './components/Questions/CauseOfDeath';
 
 const _store = new Store();
 function App() {
@@ -18,17 +26,33 @@ function App() {
   // @ts-ignore
   return (
     <StoreContext.Provider value={store}>
-      <div className="App">
+      <div className="App" >
         <div className='left-panel'>
           <Controls />
-          <TopSection/>
-          <GeneralDescription/>
-          <Circumstances />
-          <DamagePanel/>
+          <TopSection showCTSection={true}/>
+          <Flex style={{justifyContent: 'space-between'}}>
+            <CrewDetails/>
+            <CheckList/>
+          </Flex>
+          <Dates/>
+          <BodyInfo/>
+          <Flex style={{justifyContent: 'space-between'}}>
+            <DamageCause/>
+            <Armor/>
+          </Flex>
         </div>
         <div className='right-panel'>
-          <Questions />
-          <GeneralComments/>
+          <TopSection showCTSection={false}/>
+          <Flex style={{justifyContent: 'space-between'}}>
+            <div style={{width: '50%'}}>
+              <Procedures/>
+              <Flex>
+                <CauseOfDeath/>
+                <div></div>
+              </Flex>
+            </div>
+            <DamagePointsCanvas/>
+          </Flex>
         </div>
       </div>
     </StoreContext.Provider>

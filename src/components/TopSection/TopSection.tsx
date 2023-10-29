@@ -1,67 +1,55 @@
 import React, {SyntheticEvent, useCallback} from 'react';
 import './TopSection.css';
-import TextareaAutosize from 'react-textarea-autosize';
-import {useStore} from '../../store/StoreContext';
 import {observer} from 'mobx-react-lite';
 
-export const TopSection = observer(() => {
-  const {info, setInfo} = useStore();
-  const onChange = useCallback((e:SyntheticEvent, field:string) => {
-    const target = e.target as HTMLInputElement;
-    setInfo(field, target.value);
-  }, []);
+export const TopSection = observer(({showCTSection}: {showCTSection: boolean}) => {
+  // const {info, setInfo} = useStore();
+  // const onChange = useCallback((e:SyntheticEvent, field:string) => {
+  //   const target = e.target as HTMLInputElement;
+  //   setInfo(field, target.value);
+  // }, []);
 
   return (<div className={'TopSection'}>
-    <div className={'top'}>
-      <div className={'logo'}/>
-      <div className={'title'}>
+    {showCTSection && <CTSection/>}
+    <div className={'title'}>
+      <div>
         סקר חללים בחירום
       </div>
-      <div>
--סודי רפואי לאחר מילוי-
-      </div>
-      <div className={'sticker'}>
-        מדבקת חלל
+      <div className={'sub-title'}>
+        -סודי רפואי לאחר מילוי-
       </div>
     </div>
-    <table dir={'rtl'}>
-      <tbody>
-        <tr className={'no-border'}>
-          <td className={'form-filler'} colSpan={2}>פרטי ממלא הטופס</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td width={350}></td>
-        </tr>
-        <tr>
-          <td className={'bg-light-gray'}><TextareaAutosize
-            value={info.reporterName}
-            onChange={(e)=>onChange(e, 'reporterName')}/></td>
-          <td className={'bg-light-gray'}><TextareaAutosize
-            value={info.reporterID}
-            onChange={(e)=>onChange(e, 'reporterID')}/></td>
-          <td><TextareaAutosize  value={info.formDate}
-                                 onChange={(e)=>onChange(e, 'formDate')}/></td>
-          <td><TextareaAutosize  value={info.dateOfInjury}
-            onChange={(e)=>onChange(e, 'dateOfInjury')}/></td>
-          <td><TextareaAutosize value={info.timeOfInjury}
-            onChange={(e)=>onChange(e, 'timeOfInjury')}/></td>
-          <td><TextareaAutosize value={info.timeOfDeclaration}
-            onChange={(e)=>onChange(e, 'timeOfDeclaration')}/></td>
-        </tr>
-        <tr>
-          <td className={'bg-light-gray'}>שם</td>
-          <td className={'bg-light-gray'}>מ.א</td>
-          <td>תאריך מילוי הטופס</td>
-          <td>תאריך הפגיעה</td>
-          <td>שעת הפגיעה</td>
-          <td>
-            <div>שעת קביעת המוות</div>
-            <div>האם ישנה הערכה למשך הזמן בו החלל ללא סימני חיים</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className={'sticker'}>
+      מדבקת חלל
+    </div>
+    <div className={'logo'}/>
   </div>);
 
 })
+
+const CTSection = observer(() => {
+    return  <div className={'CTSection'}>
+      <table>
+        <tbody>
+          <tr>
+            <td className={'bg-light-gray'}><b>קדימות CT</b></td>
+            <td><input type={'checkbox'}/>גבוהה</td>
+            <td><input type={'checkbox'}/>נמוכה</td>
+          </tr>
+          <tr className={'no-border'}>
+            <td className={'bg-light-gray'}><b>האם בוצע CT?</b></td>
+            <td><input type={'checkbox'}/>כן </td>
+            <td><input type={'checkbox'}/>לא </td>
+          </tr>
+          <tr>
+            <td colSpan={3}>
+              <div style={{display: 'flex'}}>
+                <span>בדיקות נוספות?</span>
+                <input type={'text'} style={{width: '100%'}}/>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+});

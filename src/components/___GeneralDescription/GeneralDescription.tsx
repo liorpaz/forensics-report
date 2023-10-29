@@ -3,7 +3,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 import './GeneralDescription.css';
 
 export const GeneralDescription = () => {
-  return (<div className={'GeneralDescription'} dir={'rtl'}>
+  return (<div className={'GeneralDescription'}>
     <div>1. תאור כלליות</div>
     <table>
       <tbody>

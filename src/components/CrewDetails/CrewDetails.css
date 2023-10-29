@@ -1,0 +1,19 @@
+.CrewDetails {
+    margin: 10px 0;
+    width: 50%;
+    grid-area: crew-details;
+}
+
+.CrewDetails table input {
+    width: 100%;
+}
+
+.CrewDetails .above-table {
+    width: 100%;
+    justify-content: space-between;
+}
+.CrewDetails .above-table>div {
+    width: 49.7%;
+    border: 1px solid black;
+    height: 25px;
+}

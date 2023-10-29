@@ -1,21 +1,19 @@
 .TopSection {
+    display: flex;
     width: 100%;
     margin-bottom: 10px;
+    justify-content: flex-end;
+
 }
 
-.TopSection table {
+.FormInfoSection table {
     table-layout: fixed;
     border: none;
     width: 100%;
 }
 
-.TopSection .no-border>td{
+.FormInfoSection .no-border>td{
     border: none;
-}
-
-.TopSection .form-filler {
-    border: 1px solid #ddd;
-    background: var(--background1);
 }
 
 .TopSection .top {
@@ -23,16 +21,24 @@
 }
 
 .TopSection .title {
-    font-size: 18px;
+    margin: 20px 40px;
+    font-size: 22px;
     font-weight: bold;
+    text-align: center;
+
+}
+
+.TopSection .title .sub-title {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .TopSection .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 80px;
-    height:80px;
+    width: 100px;
+    height:100px;
+    margin-top: auto;
     background: url("./logo.jpg") no-repeat;
     background-size: contain;
 }
@@ -42,10 +48,10 @@
     border: 2px solid #000;
     font-size: 24px;
     font-weight: bold;
-    width: 50%;
-    height: 50px;
-    margin: 10px auto 10px auto;
-    line-height: 45px;
+    width: 300px;
+    height: 100px;
+    margin: 10px 20px;
+    line-height: 100px;
 }
 
 .bg-light-gray {
@@ -53,4 +59,9 @@
 }
 textarea {
     width: 100%;
+}
+
+.CTSection {
+    width: 320px;
+    margin-top: 20px;
 }

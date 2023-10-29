@@ -1,0 +1,35 @@
+.FormInfoSection {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.FormInfoSection table {
+    table-layout: fixed;
+    border: none;
+    width: 100%;
+}
+
+.FormInfoSection .no-border>td{
+    border: none;
+}
+
+.FormInfoSection .form-filler {
+    border: 1px solid #ddd;
+    background: var(--background1);
+}
+
+.FormInfoSection .top {
+    text-align: center;
+}
+
+.FormInfoSection .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bg-light-gray {
+    background: var(--background2);
+}
+textarea {
+    width: 100%;
+}

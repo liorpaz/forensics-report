@@ -2,14 +2,14 @@ import React from 'react';
 import './Questions.css';
 import {CauseOfDeath} from './CauseOfDeath';
 import {Examinations} from './Examinations';
-import {Armor} from './Armor';
+import {Armor} from '../Armor/Armor';
 import {Procedures} from './Procedures';
 
 
 
 export const Questions = () => {
   return (
-    <div className="Questions" dir={'rtl'}>
+    <div className="Questions">
       <Procedures />
       <Armor />
       <CauseOfDeath />

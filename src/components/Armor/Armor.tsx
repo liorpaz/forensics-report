@@ -1,13 +1,11 @@
 import React from 'react';
-import {protectionGear} from './questionsData';
+import {protectionGear} from '../Questions/questionsData';
 import TextareaAutosize from 'react-textarea-autosize';
 import {RadioButton} from '../RadioButton/RadioButton';
+import './Armor.css';
 
 export const Armor = () => {
-  return (<div className={'questions-section'}>
-    <div className={'title'}>5. מיגון אישי</div>
-    <div className={'question'}>האם בעת הפגיעה, החלל השתמש באמצעי מיגון? (לציין האם היה שימוש באחד מאמצעי המיגון הבאים)</div>
-    <div className={'answer'}>
+  return (<div className={'Armor'}>
       <table className={'alternating'}>
         <tbody>
         <tr>
@@ -23,6 +21,5 @@ export const Armor = () => {
           </tr>))}
         </tbody>
       </table>
-    </div>
   </div>);
 }

@@ -1,3 +1,5 @@
+
+
 .Questions {
     grid-area: questions;
 }
@@ -5,7 +7,6 @@
 .Questions ol {
     margin-top: 10px;
     list-style-type: hebrew;
-    direction: rtl;
 }
 
 .Questions ol li {

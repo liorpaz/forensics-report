@@ -7,7 +7,7 @@ import { DamagePointsCanvas } from '../DamagePointsCanvas/DamagePointsCanvas';
 
 export const DamagePanel = () => {
   return (
-    <div dir={'rtl'}>
+    <div>
       <div>
         3. אזורי גוף פגועים
       </div>

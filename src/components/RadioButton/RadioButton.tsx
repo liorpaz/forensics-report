@@ -14,3 +14,11 @@ export const RadioButton = ({options,nm}: IRadioButtonProps) => {
     </label>))}
   </div>)
 }
+interface IYesNoProps {
+  nm: string
+}
+
+export const YesNoButton = ({nm}:IYesNoProps) => {
+  const options= ['כן', 'לא'];
+  return (<RadioButton options={options} nm={nm}/>)
+}

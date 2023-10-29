@@ -1,5 +1,5 @@
 .RadioButton {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-bottom: 0px;
 }
