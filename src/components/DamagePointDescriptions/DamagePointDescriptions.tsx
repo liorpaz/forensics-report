@@ -2,13 +2,14 @@ import React, {SyntheticEvent, useCallback} from 'react';
 import './DamagePointDescriptions.css';
 import {useStore} from '../../store/StoreContext';
 import {observer} from 'mobx-react-lite';
+import {DamagePoint} from '../../types';
 
 export const DamagePointDescriptions = observer(()=> {
-  const {damagePoints, numDamagePoints, addDamagePointDescription, deleteDamagePoint} = useStore()
+  const {damagePoints, numDamagePoints, addDamagePointDescriptionField, deleteDamagePoint} = useStore()
 
-  const onInput = useCallback((e:SyntheticEvent, index:number) => {
+  const onInput = useCallback((e:SyntheticEvent, index:number, fieldName: keyof DamagePoint) => {
     const target = e.target as HTMLInputElement;
-    addDamagePointDescription(index, target.innerText);
+    addDamagePointDescriptionField(index, fieldName,  target.innerText);
   }, []);
 
   return (
@@ -16,9 +17,12 @@ export const DamagePointDescriptions = observer(()=> {
       <table >
         <thead>
           <tr>
-            <th ></th>
-            <th>תאור</th>
-            <th></th>
+            <th>מס״ד</th>
+            <th>איבר</th>
+            <th>צד</th>
+            <th>ייחוס למבנה אנטומי סמוך</th>
+            <th>סוג הפגיעה</th>
+            <th>תאור הפגיעה</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +30,11 @@ export const DamagePointDescriptions = observer(()=> {
             return (
               <tr key={index}>
                 <td className={'index'}>{index+1}</td>
-                <td contentEditable onBlur={e=>onInput(e, index)}>{dp.description}</td>
+                <td contentEditable onBlur={e=>onInput(e, index, 'limb')}>{dp.limb}</td>
+                <td contentEditable onBlur={e=>onInput(e, index, 'side')}>{dp.side}</td>
+                <td contentEditable onBlur={e=>onInput(e, index, 'anatomicRelation')}>{dp.anatomicRelation}</td>
+                <td contentEditable onBlur={e=>onInput(e, index, 'damageType')}>{dp.damageType}</td>
+                <td contentEditable onBlur={e=>onInput(e, index, 'description')}>{dp.description}</td>
                 <td className={'delete'} onClick={()=>deleteDamagePoint(index)}>🗑</td>
               </tr>
             );

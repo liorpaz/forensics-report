@@ -1,6 +1,7 @@
 import {action, makeAutoObservable, runInAction} from 'mobx';
 import {DamagePoint, Point} from '../types';
 import {autoSave} from './autoSave';
+import {DamagePointDescriptions} from '../components/DamagePointDescriptions/DamagePointDescriptions';
 
 export class Store {
   damagePoints:DamagePoint[] = [];
@@ -29,8 +30,8 @@ export class Store {
     this.damagePoints[index].areaPoints.push(graphicsPoint);
   }
 
-  addDamagePointDescription = (index: number, description: string) => {
-    this.damagePoints[index].description = description;
+  addDamagePointDescriptionField = (index: number, field: keyof DamagePoint, value: any) => {
+    this.damagePoints[index][field] = value;
   }
 
   deleteDamagePoint = (index: number) => {

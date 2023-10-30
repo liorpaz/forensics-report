@@ -8,7 +8,7 @@
 @media print  {
     .DamagePointsCanvas {
         grid-area: damage-points-canvas;
-        width: 100%;
+        width: 49%;
         height: 100%;
     }
 }

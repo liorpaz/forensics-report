@@ -18,6 +18,7 @@ import {Procedures} from './components/Questions/Procedures';
 import {DamagePointsCanvas} from './components/DamagePointsCanvas/DamagePointsCanvas';
 import {CauseOfDeath} from './components/Questions/CauseOfDeath';
 import {Findings} from './components/Findings/Findings';
+import {DamagePointDescriptions} from './components/DamagePointDescriptions/DamagePointDescriptions';
 
 const _store = new Store();
 function App() {
@@ -55,6 +56,7 @@ function App() {
             </div>
             <DamagePointsCanvas/>
           </Flex>
+          <DamagePointDescriptions/>
         </div>
       </div>
     </StoreContext.Provider>

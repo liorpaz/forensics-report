@@ -4,7 +4,7 @@ import {Flex} from '../UIComponents/UIComponents';
 
 export const CrewDetails = () => {
   return  (<div className={'CrewDetails'}>
-    <Flex className={'above-table'} style={{width: '100%'}}>
+    <Flex className={'above-table'} style={{width: '100%'}} inline={true}>
       <Flex><span>תאריך מילוי:  </span><input type={'text'}/></Flex>
       <Flex><span>שעת מילוי:  </span><input type={'text'}/></Flex>
     </Flex>
