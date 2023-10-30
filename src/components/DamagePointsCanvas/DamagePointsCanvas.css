@@ -1,15 +1,14 @@
 .DamagePointsCanvas {
     grid-area: damage-points-canvas;
     border: 1px solid black;
-    width: 500px;
-    height: 600px;
+    width: 300px;
 }
 
 @media print  {
     .DamagePointsCanvas {
         grid-area: damage-points-canvas;
-        width: 49%;
-        height: 100%;
+        width: 220px;
+        height: 350px;
     }
 }
 

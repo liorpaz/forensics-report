@@ -4,7 +4,7 @@ import './Dates.css';
 export const Dates = () => {
   return (
     <div className={'Dates'}>
-      <table style={{margin: 5}}>
+      <table>
         <tbody>
           <tr className={'bg-light-gray'}>
             <td colSpan={3}><b>יש למלא במידה וידוע:</b></td>

@@ -14,15 +14,16 @@ export const DamagePointDescriptions = observer(()=> {
 
   return (
     <div className={'DamagePointDescriptions'}>
-      <table >
+      <table className={'alternating'} >
         <thead>
           <tr>
             <th>מס״ד</th>
             <th>איבר</th>
-            <th>צד</th>
-            <th>ייחוס למבנה אנטומי סמוך</th>
-            <th>סוג הפגיעה</th>
+            <th className={'shrink'}>צד</th>
+            <th className={'shrink'}>ייחוס למבנה אנטומי סמוך</th>
+            <th className={'shrink'}>סוג הפגיעה</th>
             <th>תאור הפגיעה</th>
+            <th className={'no-print'}>d</th>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +36,7 @@ export const DamagePointDescriptions = observer(()=> {
                 <td contentEditable onBlur={e=>onInput(e, index, 'anatomicRelation')}>{dp.anatomicRelation}</td>
                 <td contentEditable onBlur={e=>onInput(e, index, 'damageType')}>{dp.damageType}</td>
                 <td contentEditable onBlur={e=>onInput(e, index, 'description')}>{dp.description}</td>
-                <td className={'delete'} onClick={()=>deleteDamagePoint(index)}>🗑</td>
+                <td className={'no-print delete'} onClick={()=>deleteDamagePoint(index)}>🗑</td>
               </tr>
             );
           })}

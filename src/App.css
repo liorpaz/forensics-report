@@ -140,10 +140,6 @@ input[type="text"] {
         height: 10px;
     }
 
-    table.alternating tr:nth-child(even) {
-        background: white;
-    }
-
     .no-print {
         display: none !important;
 

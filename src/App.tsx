@@ -46,7 +46,7 @@ function App() {
         <div className='right-panel'>
           <TopSection showCTSection={false}/>
           <Flex style={{justifyContent: 'space-between'}}>
-            <div style={{width: '50%'}}>
+            <div style={{width: '54%'}}>
               <Procedures/>
               <Flex style={{marginTop: 20}}>
                 <CauseOfDeath/>
