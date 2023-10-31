@@ -1,6 +1,6 @@
 import React from 'react';
 import './CheckList.css';
-import {RadioButton} from '../RadioButton/RadioButton';
+import {YesNoButton} from '../RadioButton/RadioButton';
 
 export const CheckList = () => {
   return (<div>
