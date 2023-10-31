@@ -1,6 +1,11 @@
 .CauseOfDeath {
-  width: 120px;
   margin-left: 10px;
+}
+
+@media print {
+  .CauseOfDeath {
+    width: 140px;
+  }
 }
 
 .code-column {

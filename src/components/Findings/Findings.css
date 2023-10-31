@@ -1,3 +1,9 @@
 .Findings {
   width: 160px;
 }
+
+@media print {
+  .Findings {
+    width: 140px;
+  }
+}
